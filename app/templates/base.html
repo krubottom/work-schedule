@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }} - Work-Schedule</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<div class="logo">
+				<a href="/">Work-Schedule</a>
+			</div>
+			<ul id="navigation">
+				<li class="active">
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/weather">Weather</a>
+				</li>
+				<li>
+					<a href="/cameraview">Camera View</a>
+				</li>
+        <li>
+          <a href="/software">Software</a>
+        </li>
+        <li>
+          <a href="/config">Configuration</a>
+        </li>
+			</ul>
+		</div>
+	</div>
+	<div id="contents">
+		<div>
+		      {% block content %}{% endblock %}
+		</div>
+	</div>
+	<div id="footer">
+		<div class="clearfix">
+		</div>
+	</div>
+</body>
+</html>
